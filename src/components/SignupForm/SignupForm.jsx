@@ -31,11 +31,11 @@ const SignupForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="signup-react-form">
       <div className="form-input">
         <UserSVG />
-        <label htmlFor="fullname">Full Name</label>
+        <label htmlFor="companyName">Company Name</label>
         <input
-          id="fullname"
-          placeholder="Enter Full Name"
-          {...register("fullname", { required: "Full name is required" })}
+          id="company_name"
+          placeholder="Enter Company Name"
+          {...register("company_name", { required: "Full name is required" })}
         />
         {errors.fullname && (
           <p className="text-red">{errors.fullname.message}</p>
