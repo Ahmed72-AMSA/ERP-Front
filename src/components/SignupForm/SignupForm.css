@@ -7,6 +7,13 @@
   margin-bottom: 0.75rem;
 }
 
+.text-red {
+  color: red;
+  font-weight: bolder;
+  
+}
+
+
 .signup-react-form > .form-input label {
   font-weight: bold;
   color: #464646;
