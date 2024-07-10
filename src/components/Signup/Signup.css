@@ -2,7 +2,7 @@
 
 .signup-from {
   width: 80rem;
-  height: 52rem;
+  height: 60rem;
   display: flex;
   flex-direction: row;
   background-color: #e9f8e6;
@@ -183,6 +183,29 @@
     font-size: 0.75rem;
   }
 }
+
+/* Login.css and Signup.css */
+
+/* Add a common class for the links to share styles */
+.text-link {
+  color: olive;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.text-link:hover {
+  background-color: rgb(128, 0, 77);
+  color: white;
+}
+
+.text-link:active {
+  background-color: darkolivegreen;
+  color: white;
+}
+
 
 @media screen and (max-width: 768px) {
   .signup-from {

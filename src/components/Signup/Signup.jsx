@@ -1,18 +1,19 @@
 import "./Signup.css";
 import React from "react";
+import { Link } from "react-router-dom";
 import AppleSVG from "../SVG/AppleSVG";
 import AutumnSVG from "../SVG/AutumnSVG";
 import GoogleSVG from "../SVG/GoogleSVG";
 import FacebookSVG from "../SVG/FacebookSVG";
 import SignupForm from "../SignupForm/SignupForm";
-import ErpSvg from "../SVG/ErpSVG"
+import ErpSvg from "../SVG/ErpSVG";
 
-const Signup = () => {
+const SignupPage = () => {
   return (
     <div className="signup-from">
       <div className="signup-froml">
-          <AutumnSVG />
-          </div>
+        <AutumnSVG />
+      </div>
       <div className="signup-fromr">
         <div className="form-header">
           <ErpSvg />
@@ -35,7 +36,7 @@ const Signup = () => {
             </span>
           </div>
           <p className="text-footer">
-            Already have an account? <span className="text-olive">Login</span>
+            Already have an account? <Link to="/" className="text-link">Login</Link>
           </p>
         </div>
       </div>
@@ -43,4 +44,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupPage;

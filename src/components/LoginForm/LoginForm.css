@@ -1,0 +1,125 @@
+/* SignupForm.css */
+
+.signup-react-form > .form-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+  
+  .text-red {
+    color: red;
+    font-weight: bolder;
+    
+  }
+  
+  
+  .signup-react-form > .form-input label {
+    font-weight: bold;
+    color: #464646;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signup-react-form > .form-input p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+  
+  .signup-react-form > button {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 0.75rem;
+    font-weight: bold;
+    border-radius: 0.6rem;
+    background-color: #73895d;
+  }
+  
+  .signup-react-form > .form-input input:focus-visible,
+  .signup-react-form > button:focus-visible {
+    outline: none;
+  }
+  
+  .signup-react-form > button:hover,
+  .signup-react-form > button:focus-visible {
+    cursor: pointer;
+    background-color: #73895dde;
+  }
+  
+  .signup-react-form > .form-input label {
+    color: #464646;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signup-react-form > .form-input .upload-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem; /* Adjust position as needed */
+    color: #73895d; /* Color of the FontAwesome icon */
+    font-size: 1.5rem; /* Adjust size of the FontAwesome icon */
+    cursor: pointer;
+  }
+  
+  .signup-react-form > .form-input input:not([type="file"]) {
+    border: 2px solid silver;
+    border-radius: 0.6rem;
+    padding: 0.75rem;
+    padding-left: 2rem;
+  }
+  
+  .signup-react-form > .form-input .file-input-label {
+    background-color: #73895d;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 2px solid silver;
+  }
+  
+  .signup-react-form > .form-input .file-input-label:hover {
+    background-color: #617a4e;
+  }
+  
+  .signup-react-form > .form-input .file-input-label:active {
+    background-color: #4e6e3c;
+  }
+  
+  .signup-react-form > .form-input input:focus + .file-input-label {
+    outline: 2px solid #73895d; /* Adjust focus styling as needed */
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .signup-react-form > .form-input {
+      margin-bottom: 0.5rem;
+    }
+    .signup-react-form > .form-input label {
+      font-size: 0.85rem;
+    }
+    .signup-react-form > .form-input input {
+      height: 2.5rem;
+      font-size: 0.85rem;
+    }
+    .signup-react-form > .form-input p {
+      font-size: 0.65rem;
+    }
+  }
+  
+  @media screen and (max-width: 920px) {
+    .signup-react-form > .form-input {
+      margin-bottom: 0.25rem;
+    }
+    .signup-react-form > .form-input label {
+      font-size: 0.75rem;
+    }
+    .signup-react-form > .form-input input {
+      height: 2rem;
+      font-size: 0.75rem;
+    }
+    .signup-react-form > .form-input p {
+      font-size: 0.5rem;
+    }
+  }
+  
