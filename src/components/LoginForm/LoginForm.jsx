@@ -14,24 +14,15 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm();
 
-
-
-
   const onSubmit = async (data) => {
     try {
-      const formData = new FormData();
-      formData.append("companyName", data.company_name);
-      formData.append("email", data.email);
-      formData.append("password", data.password);
-
-      const response = await axios.post("http://localhost:5072/api/Authentications", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post("http://localhost:5072/api/Authentications/Login", data);
 
       console.log("Response from server:", response.data);
-      toast.success("Signup successful!", { position: "top-right" });
+      if (response.data.success) {
+        toast.success("Login successful!", { position: "top-right" });
+      }
+
     } catch (error) {
       if (error.response && error.response.data && error.response.data.message) {
         toast.error(error.response.data.message, { position: "top-right" });
@@ -40,8 +31,8 @@ const LoginForm = () => {
       } else {
         toast.error("An unexpected error occurred.", { position: "top-right" });
       }
-    }
-};
+  };
+}
 
   return (
     <div>
@@ -57,7 +48,6 @@ const LoginForm = () => {
         pauseOnHover
       />
       <form onSubmit={handleSubmit(onSubmit)} className="signup-react-form">
-
         <div className="form-input">
           <EmailSVG />
           <label htmlFor="email">Email</label>
@@ -94,7 +84,6 @@ const LoginForm = () => {
             <p className="text-red">{errors.password.message}</p>
           )}
         </div>
-
         <button type="submit">Log-In</button>
       </form>
     </div>
